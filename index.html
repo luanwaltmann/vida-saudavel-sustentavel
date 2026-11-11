@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vida Saudável</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="acessibilidade.css" />
+</head>
+
+<body>
+
+  <!-- Link para pular direto ao conteúdo, útil para leitores de tela -->
+  <a href="#conteudo" class="pular-conteudo">Pular para o conteúdo principal</a>
+
+  <header id="topo">
+    <h1>🥗 Vida Saudável</h1>
+    <p>Nutrição simples para uma vida melhor</p>
+  </header>
+
+  <!-- Menu de acesso rápido às seções, navegável por Tab -->
+  <nav class="menu-acesso" aria-label="Menu de acesso rápido">
+    <ul>
+      <li><a href="#topo">Início da página</a></li>
+      <li><a href="#nutricao">Nutrição</a></li>
+      <li><a href="#macronutrientes">Macronutrientes</a></li>
+      <li><a href="#contato">Fale Conosco</a></li>
+      <li><a href="#localizacao">Localização</a></li>
+      <li><a href="#final">Fim da página</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo" tabindex="-1">
+
+  <section id="nutricao">
+    <h2>O que é Nutrição?</h2>
+    <p>
+      A <strong>nutrição</strong> estuda como os alimentos afetam o nosso corpo.
+      Uma boa alimentação ajuda na <em>prevenção de doenças</em> e mantém
+      o corpo com <strong>energia e disposição</strong> no dia a dia.
+    </p>
+    <p>Os principais nutrientes são:</p>
+    <ul>
+      <li><strong>Carboidratos</strong> — dão energia (arroz, pão, batata)</li>
+      <li><strong>Proteínas</strong> — constroem os músculos (carnes, ovos, feijão)</li>
+      <li><strong>Gorduras boas</strong> — protegem o organismo (azeite, abacate)</li>
+      <li><em>Vitaminas e Minerais</em> — regulam o corpo (frutas e verduras)</li>
+      <li><em>Água</em> — beba pelo menos <strong>2 litros por dia!</strong></li>
+    </ul>
+    <a href="#topo" class="voltar-secao">↑ Voltar ao início da página</a>
+  </section>
+
+  <section id="macronutrientes">
+    <h2>Macronutrientes</h2>
+    <p>Os <strong>macronutrientes</strong> são os nutrientes que o corpo precisa em <em>maior quantidade</em>. São eles que fornecem energia e estrutura para o organismo:</p>
+
+    <h3>🍞 Carboidratos</h3>
+    <p>São a <strong>principal fonte de energia</strong> do corpo. O cérebro e os músculos dependem deles para funcionar. Prefira os <em>carboidratos integrais</em> como arroz integral, aveia e batata-doce, pois liberam energia de forma mais lenta e equilibrada.</p>
+
+    <h3>🥩 Proteínas</h3>
+    <p>Essenciais para <strong>construir e reparar músculos</strong>, além de produzirem hormônios e anticorpos. Boas fontes incluem carnes, ovos, leite, feijão e tofu. O consumo ideal varia conforme o peso e o nível de atividade física de cada pessoa.</p>
+
+    <h3>🥑 Gorduras</h3>
+    <p>As gorduras <em>não são vilãs!</em> As <strong>gorduras boas</strong> (insaturadas) protegem o coração, auxiliam na absorção de vitaminas e fornecem energia de longa duração. Encontradas no azeite, abacate, castanhas e peixes. Evite apenas as gorduras trans presentes em alimentos ultraprocessados.</p>
+    <a href="#topo" class="voltar-secao">↑ Voltar ao início da página</a>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="seu@email.com" />
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(44) 99999-9999" />
+
+    <button type="submit">Enviar</button>
+    <br />
+    <a href="#topo" class="voltar-secao">↑ Voltar ao início da página</a>
+  </section>
+
+  <section id="localizacao">
+    <h2>📍 Localização — Roncador, PR</h2>
+    <iframe
+      title="Mapa mostrando a localização em Roncador, Paraná"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57989.97!2d-52.2741!3d-24.5948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94efd2b4e0e4b1f5%3A0x8c6e2e2e2e2e2e2e!2sRoncador%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1"
+      width="100%"
+      height="300"
+      style="border: none; border-radius: 5px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+    <a href="#topo" class="voltar-secao">↑ Voltar ao início da página</a>
+  </section>
+
+  </main>
+
+  <footer id="final">
+    <p>© 2025 Vida Saudável — Roncador, PR</p>
+  </footer>
+
+  <script src="acessibilidade.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f7f0;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #2e7d32;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9375rem;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.875rem;
+  margin-top: 10px;
+}
+
+/* Foco bem visível para quem navega com Tab */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #ffb300;
+  outline-offset: 2px;
+}
+
+/* Link "Pular para o conteúdo" - só aparece quando recebe foco */
+.pular-conteudo {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background-color: #1b5e20;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 0;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pular-conteudo:focus {
+  left: 0;
+}
+
+/* Menu de acesso rápido - sempre visível */
+.menu-acesso {
+  background-color: #1b5e20;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.menu-acesso ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.menu-acesso a {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+
+.menu-acesso a:hover {
+  background-color: #ffb300;
+  color: #1b5e20;
+}
+
+/* Botões de "voltar ao topo" dentro de cada seção */
+.voltar-secao {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.8125rem;
+  border: 1px solid #2e7d32;
+}
+
+.voltar-secao:hover {
+  background-color: #2e7d32;
+  color: white;
+}

@@ -1,0 +1,222 @@
+/* =========================================================
+   ACESSIBILIDADE — Vida Saudável
+   Os ajustes são ativados por classes no <html> (a11y-...)
+   ========================================================= */
+
+/* ---------- Botão flutuante + painel ---------- */
+.a11y-botao {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1b5e20;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+}
+
+.a11y-painel {
+  position: fixed;
+  right: 16px;
+  bottom: 76px;
+  z-index: 1000;
+  width: min(360px, calc(100vw - 32px));
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  background-color: #fff;
+  color: #222;
+  border: 3px solid #2e7d32;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .4);
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.a11y-painel[hidden] { display: none; }
+
+.a11y-painel h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem;
+  color: #1b5e20;
+}
+
+.a11y-painel h3 {
+  margin: 16px 0 8px 0;
+  font-size: 1rem;
+  color: #1b5e20;
+  border-bottom: 1px solid #c8e6c9;
+  padding-bottom: 4px;
+}
+
+.a11y-dica { margin: 0 0 8px 0; font-size: .85rem; color: #555; }
+
+.a11y-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.a11y-grade .a11y-largo { grid-column: 1 / -1; }
+
+.a11y-painel button {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-size: .95rem;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.a11y-painel button:hover { background-color: #c8e6c9; }
+
+.a11y-painel button[aria-pressed="true"] {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+.a11y-painel .a11y-fechar { background-color: #fff; }
+.a11y-painel .a11y-reset { background-color: #fff3e0; border-color: #e65100; color: #bf360c; }
+
+.a11y-nivel { text-align: center; font-weight: bold; align-self: center; }
+
+.a11y-atalhos { font-size: .8rem; color: #555; margin: 12px 0 0 0; }
+
+.a11y-live {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Foco SEMPRE bem visível, inclusive no painel */
+.a11y-botao:focus-visible,
+.a11y-painel button:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+main:focus-visible {
+  outline: 4px solid #ffb300;
+  outline-offset: 3px;
+}
+
+/* Trecho sendo lido em voz alta */
+.a11y-lendo {
+  background-color: #fff59d !important;
+  color: #000 !important;
+  outline: 3px solid #ffb300;
+}
+
+/* ---------- Espaçamento de texto ---------- */
+html.a11y-espacamento body {
+  line-height: 1.9;
+  letter-spacing: .12em;
+  word-spacing: .2em;
+}
+html.a11y-espacamento p,
+html.a11y-espacamento li { margin-bottom: 1em; }
+
+/* ---------- Fonte mais legível (dislexia) ---------- */
+html.a11y-fonte body,
+html.a11y-fonte input,
+html.a11y-fonte button {
+  font-family: Verdana, Tahoma, "Comic Sans MS", sans-serif;
+  letter-spacing: .05em;
+}
+
+/* ---------- Destacar links ---------- */
+html.a11y-links a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  font-weight: bold;
+  outline: 2px dashed #ffb300;
+  outline-offset: 2px;
+}
+
+/* ---------- Escala de cinza ---------- */
+html.a11y-cinza { filter: grayscale(100%); }
+
+/* ---------- Modo escuro ---------- */
+html.a11y-escuro body { background-color: #121212; color: #e8e8e8; }
+html.a11y-escuro header,
+html.a11y-escuro .menu-acesso { background-color: #0d3b11; }
+html.a11y-escuro section { background-color: #1e1e1e; }
+html.a11y-escuro h2,
+html.a11y-escuro h3 { color: #81c784; }
+html.a11y-escuro .menu-acesso a { background-color: #2e7d32; }
+html.a11y-escuro .voltar-secao { background-color: #263238; color: #a5d6a7; border-color: #81c784; }
+html.a11y-escuro .voltar-secao:hover { background-color: #2e7d32; color: #fff; }
+html.a11y-escuro input { background-color: #2b2b2b; color: #fff; border-color: #777; }
+html.a11y-escuro footer { color: #bbb; }
+html.a11y-escuro section a:not(.voltar-secao) { color: #90caf9; }
+
+/* ---------- Alto contraste (preto + amarelo) ---------- */
+html.a11y-contraste body { background-color: #000; color: #ffff00; }
+html.a11y-contraste header,
+html.a11y-contraste .menu-acesso,
+html.a11y-contraste section {
+  background-color: #000;
+  color: #ffff00;
+  border: 2px solid #ffff00;
+}
+html.a11y-contraste h2,
+html.a11y-contraste h3,
+html.a11y-contraste strong,
+html.a11y-contraste em,
+html.a11y-contraste label,
+html.a11y-contraste footer { color: #ffff00; }
+html.a11y-contraste a,
+html.a11y-contraste .menu-acesso a,
+html.a11y-contraste .voltar-secao {
+  background-color: #000;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  text-decoration: underline;
+}
+html.a11y-contraste .menu-acesso a:hover,
+html.a11y-contraste .voltar-secao:hover { background-color: #ffff00; color: #000; border-color: #ffff00; }
+html.a11y-contraste input { background-color: #000; color: #ffff00; border: 2px solid #ffff00; }
+html.a11y-contraste input::placeholder { color: #cccc00; }
+html.a11y-contraste button:not(.a11y-botao) { background-color: #ffff00; color: #000; border: 2px solid #ffff00; }
+html.a11y-contraste .pular-conteudo { background-color: #ffff00; color: #000; }
+
+/* O painel e o botão mantêm aparência própria em qualquer tema */
+html.a11y-contraste .a11y-botao { background-color: #ffff00; color: #000; border-color: #000; }
+html.a11y-contraste .a11y-painel { background-color: #000; color: #ffff00; border-color: #ffff00; }
+html.a11y-contraste .a11y-painel h2,
+html.a11y-contraste .a11y-painel h3,
+html.a11y-contraste .a11y-dica,
+html.a11y-contraste .a11y-atalhos { color: #ffff00; }
+html.a11y-contraste .a11y-painel button { background-color: #000; color: #ffff00; border-color: #ffff00; }
+html.a11y-contraste .a11y-painel button[aria-pressed="true"] { background-color: #ffff00; color: #000; }
+
+html.a11y-escuro .a11y-painel { background-color: #1e1e1e; color: #eee; border-color: #81c784; }
+html.a11y-escuro .a11y-painel h2,
+html.a11y-escuro .a11y-painel h3 { color: #81c784; }
+html.a11y-escuro .a11y-dica,
+html.a11y-escuro .a11y-atalhos { color: #bbb; }
+html.a11y-escuro .a11y-painel button { background-color: #263238; color: #c8e6c9; border-color: #81c784; }
+html.a11y-escuro .a11y-painel button[aria-pressed="true"] { background-color: #2e7d32; color: #fff; }
+
+/* ---------- Telas pequenas ---------- */
+@media (max-width: 480px) {
+  .a11y-botao span.a11y-rotulo { display: none; }
+}
+
+/* ---------- Respeita quem pede menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}
